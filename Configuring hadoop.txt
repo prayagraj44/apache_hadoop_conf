@@ -1,0 +1,9 @@
+Configuring hadoop
+
+1. configure the following files present in dir
+   cmd:cd /hadoop-3.1.2/etc/hadoop
+   
+   core-site.xml
+   hdfs-site.xml
+   mapred-site.xml
+   yarn-site.xml

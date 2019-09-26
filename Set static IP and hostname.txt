@@ -1,0 +1,50 @@
+Set static IP and hostname
+
+IP:
+1. check ip
+   cmd: ifconfig
+
+2. cd to /etc/sysconfig/network-scritps
+
+3: cmd: vi ifcfg-ens33
+
+4: add following attributes:
+   
+   BOOTPROTO = "none"
+   IPADDR=10.105.118.132 (your static IP)
+   NETMASK=255.255.255.0
+
+5: restart newtwork services
+   cmd: systemctl restart network
+
+6. check using ifconfig
+_______________________________________________
+
+Hostname
+1. check current hostname
+   cmd : hostname
+
+2. change using command
+   cmd: nmtui
+_______________________________________________
+
+Configure hostnames on VMs (NameNode & DataNOde)
+
+1. vi /etc/hosts then following will open 
+   
+   128.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+   ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+ 
+2. Add following :
+   
+   128.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+   ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+   10.105.118.131  NameNode.wipro.com      NameNode
+   10.105.118.132  DataNode.wipro.com      DataNode
+
+3. Do this on both vms ie NameNode and DataNOde.
+
+
+
+
+

@@ -1,0 +1,20 @@
+Installing Yum in linux Steps
+
+1. Copy rhel.iso in linux in any dir.
+   cmd: scp source_file_name username@destination_host:destination_folder
+   ex:  scp /rhel.iso root@10.105.118.131:/soft/
+
+2. Create a dir to mount rhel.iso.
+   cmd: mkdir rhel_pack
+
+3. Mount the copied iso image in the newly created folder.
+   cmd: mount --target /mountpoint
+   ex:  mount /rhel.iso /rhelpack
+
+4. Install YUM packages along with Dependencies
+   cmd: rpm -ivh "yum_file_name"
+_____________________________________________________________________________________
+
+
+
+

@@ -1,0 +1,26 @@
+Configuring YUM localrepo
+
+1. Local repo is used to store all the packages(Dependencies) that are required to 
+   intall packages . If localrepo is not configured yum will look into other repo
+   such as rhel.repo that has to be connected to internet.
+   (Repositories is an organized collection of packages that YUM uses)
+ 
+2. Create dir
+   cmd : mkdir /rhel_packs
+
+3. Create a new repository file in /etc/yum.repos.d/
+   cmd: vi /etc/yum.repos.d/local.repo
+
+4. Create the following entries in a new repository file (for example, /etc/yum.repos.d/local.repo).
+   [localrepo]
+   name=local
+   baseurl=file:///rhel_packs (should be the path of all full iso)
+   enabled=1
+   gpgcheck=0 
+   
+   
+5. cmd: yum clean all
+
+6. To check
+   cmd: yum repolist
+_____________________________________________________________________________________________________________________________
