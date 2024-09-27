@@ -39,8 +39,8 @@ Configure hostnames on VMs (NameNode & DataNOde)
    
    128.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
    ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-   10.105.118.131  NameNode.wipro.com      NameNode
-   10.105.118.132  DataNode.wipro.com      DataNode
+   10.105.118.131  NameNode.prayag.com      NameNode
+   10.105.118.132  DataNode.prayag.com      DataNode
 
 3. Do this on both vms ie NameNode and DataNOde.
 
